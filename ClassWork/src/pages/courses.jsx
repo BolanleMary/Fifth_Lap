@@ -1,6 +1,20 @@
+import { useState,  } from "react"
+
+
 const Courses =() =>{
+    const[enroll, setEnrol] = useState('')
+const onClickHandler = () =>{
+    setEnrol(enroll)
+}
+
     return <div>
-    Courses
+    <h1>Choose your Courses</h1>
+    <p>Mathematics<button onClick={onClickHandler}>Enroll</button></p>
+    <p>Chemistry <button>Enroll</button></p>
+    <p>Physics<button>Enroll</button></p>
+    <p>Geology <button>Enroll</button></p>
+    <p>English<button>Enroll</button></p>
+
     </div>
 }
 
