@@ -4,13 +4,14 @@ import routes from "./components/utils/routes";
 import Home from "./pages/home";
 import Courses from "./pages/courses";
 import EnrolledCourses from "./pages/enrolledCourses";
-import { createContext} from "react";
+import { useState } from "react";
 
-const EnrollContext= createContext(0)
+
+
 
 function App() {
-  return <EnrollContext.Provider> 
-    <>
+  return  (
+        <>
 
       <NavBar />
       <Routes>
@@ -20,7 +21,7 @@ function App() {
       </Routes>
       
     </>
-    </EnrollContext.Provider>
+  )
   
 }
 

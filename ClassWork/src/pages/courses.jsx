@@ -1,11 +1,7 @@
 import { useState,  } from "react"
 
 
-const Courses =() =>{
-    const[enroll, setEnrol] = useState('')
-const onClickHandler = () =>{
-    setEnrol(enroll)
-}
+
 
     return <div>
     <h1>Choose your Courses</h1>
@@ -16,6 +12,6 @@ const onClickHandler = () =>{
     <p>English<button>Enroll</button></p>
 
     </div>
-}
+
 
 export default Courses
