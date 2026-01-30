@@ -1,17 +1,33 @@
-import { useState,  } from "react"
+import CourseCard from "./courseCard"
+
+const Courses =({setEnrolledCourse})=>{
+    const courses =[
+        {
+            id: 1,
+            title: "React for Beginner",
+            description: "Learn React from scratch"
+        },
+
+        {
+            id: 2,
+            title: "Javascript Mastery",
+            description: "Deep dive into JavaScript"
+        }
 
 
-
-
-    return <div>
+    ]
+    return (<div>
     <h1>Choose your Courses</h1>
-    <p>Mathematics<button onClick={onClickHandler}>Enroll</button></p>
-    <p>Chemistry <button>Enroll</button></p>
-    <p>Physics<button>Enroll</button></p>
-    <p>Geology <button>Enroll</button></p>
-    <p>English<button>Enroll</button></p>
+    {courses.map(course =>(
+        <CourseCard
+        key={course.id}
+        course={course}
+        setEnrolledCourse={setEnrolledCourse}
+        />
+    ))}
 
     </div>
 
-
+    )
+};
 export default Courses

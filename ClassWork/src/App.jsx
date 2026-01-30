@@ -10,14 +10,15 @@ import { useState } from "react";
 
 
 function App() {
+  const [enrolledCourses, setEnrolledCourses] = useState(null)
   return  (
         <>
 
       <NavBar />
       <Routes>
         <Route path={routes.home} element={<Home />} />
-        <Route path={routes.courses} element={<Courses />} />
-        <Route path={routes.enrolledCourses} element={<EnrolledCourses />} />
+        <Route path={routes.courses} element={<Courses setEnrolledCourses={setEnrolledCourses} />} />
+        <Route path={routes.enrolledCourses} element={<EnrolledCourses enrolledCourses={enrolledCourses} />} />
       </Routes>
       
     </>
