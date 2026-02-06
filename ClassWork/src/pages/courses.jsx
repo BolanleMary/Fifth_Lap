@@ -1,3 +1,4 @@
+import Styles from "./Co"
 import CourseCard from "./courseCard"
 
 const Courses =({setEnrolledCourse})=>{
